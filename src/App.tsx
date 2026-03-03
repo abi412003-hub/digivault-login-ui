@@ -19,6 +19,7 @@ import PropertiesScreen from "./pages/PropertiesScreen";
 import TaskDetailsScreen from "./pages/TaskDetailsScreen";
 import TaskDetailsCompletedScreen from "./pages/TaskDetailsCompletedScreen";
 import TaskDetailsOngoingActionsScreen from "./pages/TaskDetailsOngoingActionsScreen";
+import EstimateStartScreen from "./pages/EstimateStartScreen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,7 +31,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<TaskDetailsOngoingActionsScreen />} />
+          <Route path="/" element={<EstimateStartScreen />} />
           <Route path="/dashboard" element={<DashboardScreen />} />
           <Route path="/registration-processing" element={<RegistrationProcessingScreen />} />
           <Route path="/work-experience" element={<WorkExperienceUploadScreen />} />
