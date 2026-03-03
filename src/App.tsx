@@ -9,6 +9,7 @@ import RegisterModalScreen from "./pages/RegisterModalScreen";
 import TermsAndConditionsSheetScreen from "./pages/TermsAndConditionsSheetScreen";
 import SelectUserTypeScreen from "./pages/SelectUserTypeScreen";
 import PersonalDetailsScreen from "./pages/PersonalDetailsScreen";
+import CompanyDetailsScreen from "./pages/CompanyDetailsScreen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
