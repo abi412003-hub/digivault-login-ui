@@ -24,6 +24,7 @@ import EstimateListScreen from "./pages/EstimateListScreen";
 import EstimateStepFormScreen from "./pages/EstimateStepFormScreen";
 import EstimateProcessFlowScreen from "./pages/EstimateProcessFlowScreen";
 import LeadDashboardScreen from "./pages/LeadDashboardScreen";
+import LeadStatusListScreen from "./pages/LeadStatusListScreen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,7 +36,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LeadDashboardScreen />} />
+          <Route path="/" element={<LeadStatusListScreen />} />
           <Route path="/dashboard" element={<DashboardScreen />} />
           <Route path="/registration-processing" element={<RegistrationProcessingScreen />} />
           <Route path="/work-experience" element={<WorkExperienceUploadScreen />} />
