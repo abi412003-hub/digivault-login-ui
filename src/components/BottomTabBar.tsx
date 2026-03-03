@@ -9,8 +9,8 @@ const tabs = [
   { label: "Settings", icon: Settings },
 ];
 
-const BottomTabBar = () => {
-  const [active, setActive] = useState("Home");
+const BottomTabBar = ({ defaultTab = "Home" }: { defaultTab?: string }) => {
+  const [active, setActive] = useState(defaultTab);
 
   return (
     <div className="sticky bottom-0 bg-white border-t border-gray-200 shadow-[0_-2px_10px_rgba(0,0,0,0.05)] rounded-t-2xl">
