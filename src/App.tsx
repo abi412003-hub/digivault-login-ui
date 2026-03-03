@@ -13,6 +13,7 @@ import CompanyDetailsScreen from "./pages/CompanyDetailsScreen";
 import WorkExperienceUploadScreen from "./pages/WorkExperienceUploadScreen";
 import RegistrationProcessingScreen from "./pages/RegistrationProcessingScreen";
 import DashboardScreen from "./pages/DashboardScreen";
+import ClientsListScreen from "./pages/ClientsListScreen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,7 +25,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<DashboardScreen />} />
+          <Route path="/" element={<ClientsListScreen />} />
+          <Route path="/dashboard" element={<DashboardScreen />} />
           <Route path="/registration-processing" element={<RegistrationProcessingScreen />} />
           <Route path="/work-experience" element={<WorkExperienceUploadScreen />} />
           <Route path="/company-details" element={<CompanyDetailsScreen />} />
