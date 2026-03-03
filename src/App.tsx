@@ -14,6 +14,7 @@ import WorkExperienceUploadScreen from "./pages/WorkExperienceUploadScreen";
 import RegistrationProcessingScreen from "./pages/RegistrationProcessingScreen";
 import DashboardScreen from "./pages/DashboardScreen";
 import ClientsListScreen from "./pages/ClientsListScreen";
+import ClientDetailsScreen from "./pages/ClientDetailsScreen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,7 +26,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<ClientsListScreen />} />
+          <Route path="/" element={<ClientDetailsScreen />} />
           <Route path="/dashboard" element={<DashboardScreen />} />
           <Route path="/registration-processing" element={<RegistrationProcessingScreen />} />
           <Route path="/work-experience" element={<WorkExperienceUploadScreen />} />
