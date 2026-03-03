@@ -17,6 +17,7 @@ import ClientsListScreen from "./pages/ClientsListScreen";
 import ClientDetailsScreen from "./pages/ClientDetailsScreen";
 import PropertiesScreen from "./pages/PropertiesScreen";
 import TaskDetailsScreen from "./pages/TaskDetailsScreen";
+import TaskDetailsCompletedScreen from "./pages/TaskDetailsCompletedScreen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,7 +29,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<TaskDetailsScreen />} />
+          <Route path="/" element={<TaskDetailsCompletedScreen />} />
           <Route path="/dashboard" element={<DashboardScreen />} />
           <Route path="/registration-processing" element={<RegistrationProcessingScreen />} />
           <Route path="/work-experience" element={<WorkExperienceUploadScreen />} />
