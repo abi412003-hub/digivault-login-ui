@@ -27,6 +27,7 @@ import LeadDashboardScreen from "./pages/LeadDashboardScreen";
 import LeadStatusListScreen from "./pages/LeadStatusListScreen";
 import LeadAddOrganizationScreen from "./pages/LeadAddOrganizationScreen";
 import PaymentsScreen from "./pages/PaymentsScreen";
+import RequestFormScreen from "./pages/RequestFormScreen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,7 +39,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<PaymentsScreen />} />
+          <Route path="/" element={<RequestFormScreen />} />
           <Route path="/dashboard" element={<DashboardScreen />} />
           <Route path="/registration-processing" element={<RegistrationProcessingScreen />} />
           <Route path="/work-experience" element={<WorkExperienceUploadScreen />} />
