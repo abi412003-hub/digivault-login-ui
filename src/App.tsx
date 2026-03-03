@@ -14,6 +14,7 @@ import WorkExperienceUploadScreen from "./pages/WorkExperienceUploadScreen";
 import RegistrationProcessingScreen from "./pages/RegistrationProcessingScreen";
 import DashboardScreen from "./pages/DashboardScreen";
 import ClientsListScreen from "./pages/ClientsListScreen";
+import ClientDetailsScreen from "./pages/ClientDetailsScreen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
