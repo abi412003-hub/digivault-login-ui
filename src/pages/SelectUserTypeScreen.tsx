@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { User, Building2 } from "lucide-react";
 import BackButtonIcon from "@/components/BackButtonIcon";
 import AuthHeader from "@/components/AuthHeader";
-import ChoiceCard from "@/components/ChoiceCard";
 import PrimaryButton from "@/components/PrimaryButton";
 
 const SelectUserTypeScreen = () => {
@@ -12,7 +11,6 @@ const SelectUserTypeScreen = () => {
 
   const handleContinue = () => {
     if (!selected) return;
-    // Store choice in sessionStorage for use during registration
     sessionStorage.setItem("dp_user_type", selected);
     navigate("/personal-details");
   };
@@ -31,18 +29,29 @@ const SelectUserTypeScreen = () => {
         </p>
 
         <div className="flex gap-4 mt-6 justify-center">
-          <ChoiceCard
-            icon={<User size={32} />}
-            label="Individual"
-            selected={selected === "individual"}
+          <button
             onClick={() => setSelected("individual")}
-          />
-          <ChoiceCard
-            icon={<Building2 size={32} />}
-            label="Organization"
-            selected={selected === "organization"}
+            className={`w-36 h-24 rounded-lg flex flex-col items-center justify-center gap-2 cursor-pointer transition-all active:scale-[0.98] ${
+              selected === "individual"
+                ? "bg-blue-700 text-white ring-2 ring-blue-700"
+                : "bg-[#E6ECFF] text-blue-900 hover:bg-blue-200/60"
+            }`}
+          >
+            <User size={28} />
+            <span className="text-sm font-medium">Individual</span>
+          </button>
+
+          <button
             onClick={() => setSelected("organization")}
-          />
+            className={`w-36 h-24 rounded-lg flex flex-col items-center justify-center gap-2 cursor-pointer transition-all active:scale-[0.98] ${
+              selected === "organization"
+                ? "bg-blue-700 text-white ring-2 ring-blue-700"
+                : "bg-[#E6ECFF] text-blue-900 hover:bg-blue-200/60"
+            }`}
+          >
+            <Building2 size={28} />
+            <span className="text-sm font-medium">Organization</span>
+          </button>
         </div>
 
         <div className="mt-8 bg-gray-50 rounded-lg p-4">
@@ -56,7 +65,6 @@ const SelectUserTypeScreen = () => {
           <PrimaryButton
             label="Continue"
             onClick={handleContinue}
-            disabled={!selected}
           />
         </div>
       </div>
