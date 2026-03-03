@@ -8,6 +8,7 @@ import LoginScreen from "./pages/LoginScreen";
 import RegisterModalScreen from "./pages/RegisterModalScreen";
 import TermsAndConditionsSheetScreen from "./pages/TermsAndConditionsSheetScreen";
 import SelectUserTypeScreen from "./pages/SelectUserTypeScreen";
+import PersonalDetailsScreen from "./pages/PersonalDetailsScreen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -19,7 +20,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<SelectUserTypeScreen />} />
+          <Route path="/" element={<PersonalDetailsScreen />} />
+          <Route path="/select-type" element={<SelectUserTypeScreen />} />
           <Route path="/login" element={<LoginScreen />} />
           <Route path="/register" element={<RegisterModalScreen />} />
           <Route path="/terms" element={<TermsAndConditionsSheetScreen />} />
