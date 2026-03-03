@@ -38,7 +38,7 @@ const ClientsListScreen = () => {
           ))}
         </div>
 
-        <BottomTabBar />
+        <BottomTabBar defaultTab="Client" />
       </div>
     </div>
   );
