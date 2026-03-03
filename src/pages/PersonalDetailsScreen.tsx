@@ -178,7 +178,7 @@ const PersonalDetailsScreen = () => {
   const validate = (): boolean => {
     const e: Record<string, string> = {};
     if (!form.fullName || form.fullName.length < 3) e.fullName = "Name must be at least 3 characters";
-    if (!/^[a-zA-Z\s]+$/.test(form.fullName)) e.fullName = "Only alphabets and spaces allowed";
+    else if (!/^[a-zA-Z\s]+$/.test(form.fullName)) e.fullName = "Only alphabets and spaces allowed";
     if (!form.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Enter valid email address";
     if (!form.phone || form.phone.length !== 10) e.phone = "Phone number must be 10 digits";
     if (!form.address || form.address.length < 10) e.address = "Address must be at least 10 characters";
