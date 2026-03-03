@@ -21,7 +21,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<PersonalDetailsScreen />} />
+          <Route path="/" element={<CompanyDetailsScreen />} />
+          <Route path="/personal-details" element={<PersonalDetailsScreen />} />
           <Route path="/select-type" element={<SelectUserTypeScreen />} />
           <Route path="/login" element={<LoginScreen />} />
           <Route path="/register" element={<RegisterModalScreen />} />
