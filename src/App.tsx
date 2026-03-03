@@ -15,6 +15,7 @@ import RegistrationProcessingScreen from "./pages/RegistrationProcessingScreen";
 import DashboardScreen from "./pages/DashboardScreen";
 import ClientsListScreen from "./pages/ClientsListScreen";
 import ClientDetailsScreen from "./pages/ClientDetailsScreen";
+import PropertiesScreen from "./pages/PropertiesScreen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
