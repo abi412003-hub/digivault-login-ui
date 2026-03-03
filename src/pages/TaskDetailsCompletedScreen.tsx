@@ -6,7 +6,7 @@ import HeaderRowWithBack from "@/components/HeaderRowWithBack";
 import ClientInfoBlock from "@/components/ClientInfoBlock";
 import DocumentPreviewCard from "@/components/DocumentPreviewCard";
 import BottomTabBar from "@/components/BottomTabBar";
-import { toast } from "@/components/ui/use-toast";
+const toast = (opts: any) => { if (opts.variant === 'destructive') alert(opts.description || opts.title); };
 
 const TaskDetailsCompletedScreen = () => {
   const navigate = useNavigate();

@@ -4,7 +4,7 @@ import { useAuth } from "@/lib/AuthContext";
 import { supabase } from "@/lib/supabase";
 import BottomTabBar from "@/components/BottomTabBar";
 import { Camera, LogOut, ChevronRight, Shield, Bell, HelpCircle, FileText } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
+const toast = (opts: any) => { if (opts.variant === 'destructive') alert(opts.description || opts.title); };
 
 interface ProfileData {
   full_name: string;

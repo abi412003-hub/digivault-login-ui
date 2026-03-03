@@ -7,7 +7,7 @@ import ClientInfoBlock from "@/components/ClientInfoBlock";
 import PdfThumbCard from "@/components/PdfThumbCard";
 import VerticalStepper from "@/components/VerticalStepper";
 import BottomTabBar from "@/components/BottomTabBar";
-import { toast } from "@/components/ui/use-toast";
+const toast = (opts: any) => { if (opts.variant === 'destructive') alert(opts.description || opts.title); };
 
 const TaskDetailsScreen = () => {
   const navigate = useNavigate();

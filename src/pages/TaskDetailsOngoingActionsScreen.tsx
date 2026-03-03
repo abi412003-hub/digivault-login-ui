@@ -8,7 +8,7 @@ import PdfThumbCard from "@/components/PdfThumbCard";
 import VerticalStepper from "@/components/VerticalStepper";
 import BottomTabBar from "@/components/BottomTabBar";
 import { Upload, Check } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
+const toast = (opts: any) => { if (opts.variant === 'destructive') alert(opts.description || opts.title); };
 
 const TaskDetailsOngoingActionsScreen = () => {
   const navigate = useNavigate();

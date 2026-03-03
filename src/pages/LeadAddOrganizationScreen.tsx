@@ -5,7 +5,7 @@ import { supabase } from "@/lib/supabase";
 import HeaderRowWithBack from "@/components/HeaderRowWithBack";
 import BottomTabBar from "@/components/BottomTabBar";
 import PrimaryButton from "@/components/PrimaryButton";
-import { toast } from "@/components/ui/use-toast";
+const toast = (opts: any) => { if (opts.variant === 'destructive') alert(opts.description || opts.title); };
 
 const LeadAddOrganizationScreen = () => {
   const navigate = useNavigate();

@@ -7,7 +7,7 @@ import FormField from "@/components/FormField";
 import SelectField from "@/components/SelectField";
 import TextAreaField from "@/components/TextAreaField";
 import PrimaryButton from "@/components/PrimaryButton";
-import { toast } from "@/components/ui/use-toast";
+const toast = (opts: any) => { if (opts.variant === 'destructive') alert(opts.description || opts.title); };
 
 const companyTypes = ["Pvt Ltd", "LLP", "Proprietorship", "Partnership", "OPC", "Others"];
 const revenueRanges = ["Below 10L", "10L – 50L", "50L – 1Cr", "1Cr – 5Cr", "5Cr+"];

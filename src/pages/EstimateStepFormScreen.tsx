@@ -4,7 +4,7 @@ import { useAuth } from "@/lib/AuthContext";
 import { supabase } from "@/lib/supabase";
 import BottomTabBar from "@/components/BottomTabBar";
 import ExpensePill from "@/components/ExpensePill";
-import { toast } from "@/components/ui/use-toast";
+const toast = (opts: any) => { if (opts.variant === 'destructive') alert(opts.description || opts.title); };
 
 const EstimateStepFormScreen = () => {
   const navigate = useNavigate();

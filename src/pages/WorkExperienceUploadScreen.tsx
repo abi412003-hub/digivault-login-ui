@@ -6,7 +6,7 @@ import TopTitleBar from "@/components/TopTitleBar";
 import FormField from "@/components/FormField";
 import PrimaryButton from "@/components/PrimaryButton";
 import { Upload, CheckCircle, X, Loader2 } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
+const toast = (opts: any) => { if (opts.variant === 'destructive') alert(opts.description || opts.title); };
 
 interface DocUpload {
   key: string;
