@@ -1,19 +1,25 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "@/lib/AuthContext";
 
-const TestPage = () => (
-  <div style={{ padding: 40 }}>
-    <h1>App is working!</h1>
-    <p>If you see this, the base app loads fine.</p>
-    <a href="/login">Go to Login</a>
-  </div>
-);
+import AllPagesIndex from "./pages/AllPagesIndex";
+import LoginScreen from "./pages/LoginScreen";
+import NotFound from "./pages/NotFound";
+
+const queryClient = new QueryClient();
 
 const App = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path="*" element={<TestPage />} />
-    </Routes>
-  </BrowserRouter>
+  <QueryClientProvider client={queryClient}>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<AllPagesIndex />} />
+          <Route path="/login" element={<LoginScreen />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
+  </QueryClientProvider>
 );
 
 export default App;
