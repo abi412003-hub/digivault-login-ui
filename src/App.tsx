@@ -22,6 +22,7 @@ import TaskDetailsOngoingActionsScreen from "./pages/TaskDetailsOngoingActionsSc
 import EstimateStartScreen from "./pages/EstimateStartScreen";
 import EstimateListScreen from "./pages/EstimateListScreen";
 import EstimateStepFormScreen from "./pages/EstimateStepFormScreen";
+import EstimateProcessFlowScreen from "./pages/EstimateProcessFlowScreen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,7 +34,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<EstimateStepFormScreen />} />
+          <Route path="/" element={<EstimateProcessFlowScreen />} />
           <Route path="/dashboard" element={<DashboardScreen />} />
           <Route path="/registration-processing" element={<RegistrationProcessingScreen />} />
           <Route path="/work-experience" element={<WorkExperienceUploadScreen />} />
