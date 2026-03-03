@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import LoginScreen from "./pages/LoginScreen";
 import RegisterModalScreen from "./pages/RegisterModalScreen";
 import TermsAndConditionsSheetScreen from "./pages/TermsAndConditionsSheetScreen";
+import SelectUserTypeScreen from "./pages/SelectUserTypeScreen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
