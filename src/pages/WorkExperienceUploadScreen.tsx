@@ -36,7 +36,7 @@ const WorkExperienceUploadScreen = () => {
 
         <div className="flex flex-col gap-4">
           {uploads.map((name) => (
-            <UploadField key={name} label={name} onClick={() => console.log(`Upload clicked: ${name}`)} />
+            <UploadField key={name} label={name} onClick={() => console.log(`Upload clicked: ${name}`)} onPreview={() => console.log(`Preview: ${name}`)} onNotAvailable={() => console.log(`Not Available: ${name}`)} />
           ))}
         </div>
 
